@@ -1,0 +1,80 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tuto3exercice1;
+import java.util.Scanner;
+/**
+ *
+ * @author 932254291
+ */
+public class Tuto3exercice1 {
+    private String colour;
+    private int  number;
+    
+    public String getPoketcolour(){
+        colour="h";
+        if (number==0){
+            colour="green";
+            
+        }
+        if(number>1 && number<10){
+            if(number%2==0){
+                colour="red";}
+              
+            else{
+                colour="black";
+                        }
+            }
+        else if(number>10 && number<18){
+            if(number%2==0){
+                colour="black";}
+              
+            else{
+                colour="red";
+                        }
+            }
+        else if(number>19 && number<28){
+            if(number%2==0){
+                colour="red";}
+              
+            else{
+                colour="black";
+                        }
+            }
+        else if(number>29 && number<36){
+            if(number%2==0){
+                colour="black";}
+              
+            else {
+                colour="red";
+                        }
+            }
+        return colour;
+        }        
+    
+          
+
+    public void Tuto3exercice1( int number) {
+        
+       this.number = number;
+    }
+            
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int number;
+        Tuto3exercice1 room1=new Tuto3exercice1();
+        Scanner input=new Scanner(System.in);
+        System.out.println("PLEASE enter a number between 0 and 36 includ");
+        number=input.nextInt();
+        room1.Tuto3exercice1(number);
+        System.out.println(""+room1.getPoketcolour());
+
+    }
+    
+}
