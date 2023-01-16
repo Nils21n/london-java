@@ -1,0 +1,54 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tutoriel3.pkg1exo1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author 932254291
+ * 
+ * 
+ * Create a class named Billing that includes three overloaded computeBill() methods for a photo book store. 
+a.  When computeBill() receives a single parameter, it represents the price of one photo book ordered. Add 8% tax, and return the total due. 
+b. When computeBill() receives two parameters, they represent the price of a photo book and the quantity ordered. Multiply the two values, add 8% tax, and return the total due.  
+c. When computeBill() receives three parameters, they represent the price of a photo book, the quantity ordered, and a coupon value. Multiply the quantity and price, reduce the result by the coupon value, and then add 8% tax and return the total due. 
+Write a main() method that tests all three overloaded methods. 
+
+
+ */
+public class Tutoriel31exo1 {
+    
+    
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        double prize;
+        Billing room1=new Billing();
+        Scanner input=new Scanner(System.in);
+        
+        prize=input.nextDouble();
+        System.out.println("the prize of one book is :"+room1.computeBill(prize));
+    }}
+    
+
+class Billing{
+    public double computeBill(double prize){
+        prize=prize+(8/100)*prize;
+        return prize;
+    }
+    public double computeBill(double prize,double quantity){
+        prize=prize*quantity+(8/100)*prize*quantity;
+        return prize;
+    }
+    public double computeBill(double prize,double quantity,double coupon){
+        prize=prize*quantity-coupon+(8/100)*prize*quantity;
+        return prize;
+    }
+}
