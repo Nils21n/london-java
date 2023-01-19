@@ -1,0 +1,46 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+
+In a program, write a method that accepts two arguments: an array and a number n. 
+Assume that the array contains integers. The method should display all of the numbers in the array 
+that are greater than the number n. 
+
+ */
+package exo.cours;
+
+/**
+ *
+ * @author 932254291
+ */
+public class ExoCours {
+
+	public static void main(String[] args) {
+	
+	//first array
+	int [] myList1 = {1, 5, 10, 2, 4, -3, 6};
+	int numKey1 = 3;
+	
+	//second array
+	int [] myList2 = {10, 12, 15, 24};
+	int numKey2 = 12;
+	
+	//call first array
+	printNumbers(myList1, numKey1);
+	
+	//call second array
+	printNumbers(myList2, numKey2);
+
+	}
+	
+	public static void printNumbers(int[] list, int num) {
+		
+		for(int values: list) {
+			if(values > num) {
+				System.out.println(values);
+			}
+		}
+	}
+
+}
