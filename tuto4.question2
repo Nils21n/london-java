@@ -1,0 +1,83 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package question2.tutoriel4;
+
+/**
+ *
+ * @author 932254291
+ * 
+ * Write a class for an insurance company to determine policy premiums. The class should have the variables customer id, type of policy(health/auto). Write the necessary constructors, accessor and mutator methods. The method/s should calculate the premium for health and auto insurance policy.  The premium is calculated as follows:
+The health insurance method asks users whether they smoke; the premium is $250 for smokers and $190 for nonsmokers. The auto insurance method asks users to enter the number of traffic tickets they have received in the last three years. The premium is $175 for drivers with three or more tickets, $140 for those with one or two tickets, and $95 for those with no tickets
+Write the demo class that asks the user for the customer id.  It also prompts each user for the type of policy needed—health or auto. Calculate and display the premium for both the types of policies. Do you need static variables or methods here? Can you apply overloading?
+
+ */
+public class Question2Tutoriel4 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String customerid;
+    String policyType;
+    double premium;
+    String smoker;
+    int tickets;
+    
+    }
+    
+}
+
+public class Insurance{
+    String customerid;
+    String policyType;
+    double premium;
+    String smoker;
+    int tickets;
+    
+    public Insurance(String customerid,String policyType){
+    this.customerid=customerid;
+    this.policyType=policyType;
+}
+    public String getCustomerId(){
+        return customerid;
+    }
+    
+    public String getpolicyType(){
+        return policyType;
+    }
+    
+    public double premium(){
+        return premium;
+    }
+    
+    public int getTickets(){
+        return tickets;
+    }
+    
+    public double calculatePremium(){
+        if(policyType.equals("health")){
+            if(smoker.equals("yes")){
+                premium=250;
+            }else{
+                       premium=190; 
+                        }
+            }
+            
+        else if(policyType.equals("auto")){
+            if(tickets>3){
+                premium=175;
+            }else if (tickets==1 && tickets==2){
+                premium=140;
+            }else  {
+                        premium=95;
+                        }
+        }
+        return premium;
+    }
+}
+            
+        
